@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "title": "Create Next App",
+    "description": "Gerado pelo create next app"
+  },
+  "nextjsLogoAlt": "Logo do Next.js",
+  "vercelLogoAlt": "Logomarca da Vercel",
+  "steps": {
+    "step-001": "Comece editando",
+    "step-002": "Salve e veja suas mudanças instantaneamente"
+  },
+  "buttons": {
+    "deployNow": "Implante agora",
+    "readOurDocs": "Leia nossa documentação"
+  },
+  "footer": {
+    "learn": {
+      "title": "Aprender",
+      "iconAlt": "Ícone de arquivo"
+    },
+    "examples": {
+      "title": "Exemplos",
+      "iconAlt": "Ícone de janela"
+    },
+    "goToNextjsOrg": {
+      "title": "Ir para nextjs.org",
+      "iconAlt": "Ícone de globo"
+    }
+  },
+  "notFoundPage": {
+    "title": "Esta página não existe.",
+    "message": "Por favor, verifique a URL ou volte para a página inicial.",
+    "goBackButton": "Voltar"
+  },
+  "errorPage": {
+    "title": "Ocorreu um erro inesperado",
+    "message": "Por favor, tente novamente.",
+    "tryAgainButton": "Tente novamente"
+  },
+  "manifest": {
+    "name": "Create Next App",
+    "shortName": "CNA",
+    "description": "Gerado pelo create next app"
+  }
+}
