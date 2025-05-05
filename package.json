@@ -23,13 +23,11 @@
   "dependencies": {
     "clsx": "^2.1.1",
     "next": "15.3.1",
-    "next-auth": "^4.24.8",
     "next-intl": "^3.21.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "sharp": "^0.33.5",
-    "tailwind-merge": "^2.5.4",
-    "zod": "^3.23.8"
+    "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",
