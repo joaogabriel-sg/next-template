@@ -33,6 +33,7 @@
     "goBackButton": "Voltar"
   },
   "errorPage": {
+    "heading": "Erro",
     "title": "Ocorreu um erro inesperado",
     "message": "Por favor, tente novamente.",
     "tryAgainButton": "Tente novamente"
