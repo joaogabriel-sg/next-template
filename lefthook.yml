@@ -1,10 +1,12 @@
 pre-commit:
-  parallel: true
+  piped: true
   commands:
     "checking types":
       run: pnpm typeCheck
     "checking lint":
       run: pnpm lint
+    "checking format":
+      run: pnpm format:check
 
 commit-msg:
   commands:
