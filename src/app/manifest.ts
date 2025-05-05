@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { getTranslations } from "next-intl/server";
 
-import { DEFAULT_LANGUAGE } from "@/shared/constants/language";
+import { DEFAULT_LANGUAGE } from "~/shared/constants/language";
 
 export default async function manifest(): Promise<MetadataRoute.Manifest> {
   // Pick a locale that is representative of the app
