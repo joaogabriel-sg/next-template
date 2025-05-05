@@ -1,8 +1,8 @@
 import { getRequestConfig } from "next-intl/server";
 import { cookies } from "next/headers";
 
-import { DEFAULT_LANGUAGE } from "@/shared/constants/language";
-import { STORAGE_KEYS } from "@/shared/constants/storage-keys";
+import { DEFAULT_LANGUAGE } from "~/shared/constants/language";
+import { STORAGE_KEYS } from "~/shared/constants/storage-keys";
 
 export default getRequestConfig(async () => {
   const locale =
@@ -10,6 +10,6 @@ export default getRequestConfig(async () => {
 
   return {
     locale,
-    messages: (await import(`@/i18n/translations/${locale}.json`)).default,
+    messages: (await import(`~/i18n/translations/${locale}.json`)).default,
   };
 });

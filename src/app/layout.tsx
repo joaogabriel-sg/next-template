@@ -3,7 +3,7 @@ import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { type Metadata } from "next";
 
-import "@/styles/globals.css";
+import "~/styles/globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
