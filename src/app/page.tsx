@@ -12,7 +12,7 @@ export default function RootPage() {
           className="dark:invert"
           height={38}
           priority
-          src="https://nextjs.org/icons/next.svg"
+          src="/next.svg"
           width={180}
         />
         <ol className="list-inside list-decimal text-center font-[family-name:var(--font-geist-mono)] text-sm sm:text-left">
@@ -37,7 +37,7 @@ export default function RootPage() {
               alt={t("vercelLogoAlt")}
               className="dark:invert"
               height={20}
-              src="https://nextjs.org/icons/vercel.svg"
+              src="/vercel.svg"
               width={20}
             />
             {t("buttons.deployNow")}
@@ -63,7 +63,7 @@ export default function RootPage() {
             alt={t("footer.learn.iconAlt")}
             aria-hidden
             height={16}
-            src="https://nextjs.org/icons/file.svg"
+            src="/file.svg"
             width={16}
           />
           {t("footer.learn.title")}
@@ -78,7 +78,7 @@ export default function RootPage() {
             alt={t("footer.examples.iconAlt")}
             aria-hidden
             height={16}
-            src="https://nextjs.org/icons/window.svg"
+            src="/window.svg"
             width={16}
           />
           {t("footer.examples.title")}
@@ -93,7 +93,7 @@ export default function RootPage() {
             alt={t("footer.goToNextjsOrg.iconAlt")}
             aria-hidden
             height={16}
-            src="https://nextjs.org/icons/globe.svg"
+            src="/globe.svg"
             width={16}
           />
           {t("footer.goToNextjsOrg.title")}
