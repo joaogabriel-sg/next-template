@@ -1,13 +1,15 @@
-import { notFound } from "next/navigation";
 import { getRequestConfig } from "next-intl/server";
+import { cookies } from "next/headers";
 
-import { Locale, routing } from "./routing";
+import { DEFAULT_LANGUAGE } from "@/shared/constants/language";
+import { STORAGE_KEYS } from "@/shared/constants/storage-keys";
 
-export default getRequestConfig(async ({ locale }) => {
-  // Validate that the incoming `locale` parameter is valid
-  if (!routing.locales.includes(locale as Locale)) notFound();
+export default getRequestConfig(async () => {
+  const locale =
+    (await cookies()).get(STORAGE_KEYS.LANGUAGE)?.value ?? DEFAULT_LANGUAGE;
 
   return {
+    locale,
     messages: (await import(`../../messages/${locale}.json`)).default,
   };
 });

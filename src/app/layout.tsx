@@ -1,4 +1,7 @@
 import localFont from "next/font/local";
+import { getLocale, getMessages, getTranslations } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
+import { type Metadata } from "next";
 
 import "./globals.css";
 
@@ -14,19 +17,32 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export default function RootLayout({
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  const tMetadata = await getTranslations({ locale, namespace: "metadata" });
+
+  return {
+    description: tMetadata("description"),
+    title: tMetadata("title"),
+  };
+}
+
+export default async function RootLayout({
   children,
-  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
 }>) {
+  const messages = await getMessages();
+  const locale = await getLocale();
+
   return (
     <html lang={locale}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
