@@ -15,8 +15,8 @@ importers:
         specifier: 15.3.1
         version: 15.3.1(@babel/core@7.25.8)(@playwright/test@1.48.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       next-intl:
-        specifier: ^3.21.1
-        version: 3.21.1(next@15.3.1(@babel/core@7.25.8)(@playwright/test@1.48.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
+        specifier: ^4.1.0
+        version: 4.1.0(next@15.3.1(@babel/core@7.25.8)(@playwright/test@1.48.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)(typescript@5.6.3)
       react:
         specifier: ^19.1.0
         version: 19.1.0
@@ -924,6 +924,9 @@ packages:
 
   '@rushstack/eslint-patch@1.11.0':
     resolution: {integrity: sha512-zxnHvoMQVqewTJr/W4pKjF0bMGiKJv1WX7bSrkl46Hg0QjESbzBROWK0Wg4RphzSOS5Jiy7eFimmM3UgMrMZbQ==}
+
+  '@schummar/icu-type-parser@1.21.5':
+    resolution: {integrity: sha512-bXHSaW5jRTmke9Vd0h5P7BtWZG9Znqb8gSDxZnxaGSJnGwPLDPfS+3g0BKzeWqzgZPsIVZkM7m2tbo18cm5HBw==}
 
   '@swc/counter@0.1.3':
     resolution: {integrity: sha512-e2BR4lsJkkRlKZ/qCHPw9ZaSxc0MVUd7gtbtaB7aMvHeJVYe8sOB8DBZkP2DtISHGSku9sCK6T6cnY0CtXrOCQ==}
@@ -2708,19 +2711,19 @@ packages:
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
-  negotiator@0.6.3:
-    resolution: {integrity: sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==}
-    engines: {node: '>= 0.6'}
-
   negotiator@1.0.0:
     resolution: {integrity: sha512-8Ofs/AUQh8MaEcrlq5xOX0CQ9ypTF5dl78mjlMNfOK08fzpgTHQRQPBxcPlEtIw0yRpws+Zo/3r+5WRby7u3Gg==}
     engines: {node: '>= 0.6'}
 
-  next-intl@3.21.1:
-    resolution: {integrity: sha512-hQm4Wgq5i1lfOHAWmXBVl5d2/XAeddcjsrUmjotXEESzPSvW5j2t0Pr8AV8WorTILgqU748aXuenBhz5P78tdw==}
+  next-intl@4.1.0:
+    resolution: {integrity: sha512-JNJRjc7sdnfUxhZmGcvzDszZ60tQKrygV/VLsgzXhnJDxQPn1cN2rVpc53adA1SvBJwPK2O6Sc6b4gYSILjCzw==}
     peerDependencies:
-      next: ^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0 || ^14.0.0
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      next: ^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || >=19.0.0-rc <19.0.0 || ^19.0.0
+      typescript: ^5.0.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
 
   next@15.3.1:
     resolution: {integrity: sha512-8+dDV0xNLOgHlyBxP1GwHGVaNXsmp+2NhZEYrXr24GWLHtt27YrBPbPuHvzlhi7kZNYjeJNR93IF5zfFu5UL0g==}
@@ -3389,10 +3392,10 @@ packages:
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
-  use-intl@3.21.1:
-    resolution: {integrity: sha512-52kYgcydYkG9SX0ZZGt7W6WD2Va01hwe15bDgkXuaTdSxrF9fDu6hHTV5DxIuSmSSf/FEcBo/nodpw3ZhY31Lw==}
+  use-intl@4.1.0:
+    resolution: {integrity: sha512-mQvDYFvoGn+bm/PWvlQOtluKCknsQ5a9F1Cj0hMfBjMBVTwnOqLPd6srhjvVdEQEQFVyHM1PfyifKqKYb11M9Q==}
     peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react: ^17.0.0 || ^18.0.0 || >=19.0.0-rc <19.0.0 || ^19.0.0
 
   v8-compile-cache-lib@3.0.1:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
@@ -3970,26 +3973,26 @@ snapshots:
     dependencies:
       '@formatjs/fast-memoize': 2.2.0
       '@formatjs/intl-localematcher': 0.5.4
-      tslib: 2.7.0
+      tslib: 2.8.1
 
   '@formatjs/fast-memoize@2.2.0':
     dependencies:
-      tslib: 2.7.0
+      tslib: 2.8.1
 
   '@formatjs/icu-messageformat-parser@2.7.9':
     dependencies:
       '@formatjs/ecma402-abstract': 2.1.0
       '@formatjs/icu-skeleton-parser': 1.8.3
-      tslib: 2.7.0
+      tslib: 2.8.1
 
   '@formatjs/icu-skeleton-parser@1.8.3':
     dependencies:
       '@formatjs/ecma402-abstract': 2.1.0
-      tslib: 2.7.0
+      tslib: 2.8.1
 
   '@formatjs/intl-localematcher@0.5.4':
     dependencies:
-      tslib: 2.7.0
+      tslib: 2.8.1
 
   '@humanfs/core@0.19.1': {}
 
@@ -4316,6 +4319,8 @@ snapshots:
   '@rtsao/scc@1.1.0': {}
 
   '@rushstack/eslint-patch@1.11.0': {}
+
+  '@schummar/icu-type-parser@1.21.5': {}
 
   '@swc/counter@0.1.3': {}
 
@@ -5812,7 +5817,7 @@ snapshots:
       '@formatjs/ecma402-abstract': 2.1.0
       '@formatjs/fast-memoize': 2.2.0
       '@formatjs/icu-messageformat-parser': 2.7.9
-      tslib: 2.7.0
+      tslib: 2.8.1
 
   ipaddr.js@1.9.1: {}
 
@@ -6262,17 +6267,17 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  negotiator@0.6.3: {}
-
   negotiator@1.0.0: {}
 
-  next-intl@3.21.1(next@15.3.1(@babel/core@7.25.8)(@playwright/test@1.48.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0):
+  next-intl@4.1.0(next@15.3.1(@babel/core@7.25.8)(@playwright/test@1.48.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)(typescript@5.6.3):
     dependencies:
       '@formatjs/intl-localematcher': 0.5.4
-      negotiator: 0.6.3
+      negotiator: 1.0.0
       next: 15.3.1(@babel/core@7.25.8)(@playwright/test@1.48.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       react: 19.1.0
-      use-intl: 3.21.1(react@19.1.0)
+      use-intl: 4.1.0(react@19.1.0)
+    optionalDependencies:
+      typescript: 5.6.3
 
   next@15.3.1(@babel/core@7.25.8)(@playwright/test@1.48.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
@@ -6979,7 +6984,8 @@ snapshots:
       minimist: 1.2.8
       strip-bom: 3.0.0
 
-  tslib@2.7.0: {}
+  tslib@2.7.0:
+    optional: true
 
   tslib@2.8.1: {}
 
@@ -7073,9 +7079,10 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  use-intl@3.21.1(react@19.1.0):
+  use-intl@4.1.0(react@19.1.0):
     dependencies:
       '@formatjs/fast-memoize': 2.2.0
+      '@schummar/icu-type-parser': 1.21.5
       intl-messageformat: 10.6.0
       react: 19.1.0
 
