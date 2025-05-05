@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Template
+
+A clean and ready-to-go Next.js starter template with TypeScript, ESLint, Prettier, testing tools, and a few essential libraries pre-installed — so you can focus on building your app instead of configuring tools from scratch.
+
+## What's included
+
+This template comes pre-configured with:
+
+- ⚡️ Next.js — React framework with SSR and file-based routing
+- ⚛️ React — for building UI
+- 🧠 TypeScript — static typing
+- 🎨 Tailwind CSS — utility-first CSS framework
+- 🧹 ESLint — linting setup with custom rules
+- ✨ Prettier — code formatting
+- 🧪 Vitest — unit testing
+- 🧫 Testing Library — testing React components
+- 🧭 Playwright — end-to-end testing
+- 🪝 Lefthook — Git hooks runner
+- 🔎 Path aliases — use "~/..." instead of relative paths
+- ✅ PR workflow — lint, type check, and tests before merging
 
 ## Getting Started
 
-First, run the development server:
+### Download and install
+
+You can create a new Next.js app using this template with the following command:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# pnpm
+pnpm create next-app -e https://github.com/joaogabriel-sg/next-template
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+After finishing the installation, navigate to the project directory and run the setup script:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+cd my-next-app
+pnpm setup:project
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Run the app
 
-## Learn More
+To start the Next.js development server, run:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+pnpm dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The app will be available at [http://localhost:5173](http://localhost:5173) by default.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📜 Available Scripts
 
-## Deploy on Vercel
+- `pnpm setup:project` — install deps and enable git hooks
+- `pnpm dev` — start development server
+- `pnpm build` — create production build
+- `pnpm start` — start production server
+- `pnpm lint` — run ESLint
+- `pnpm format` — run Prettier
+- `pnpm format:check` — check Prettier formatting
+- `pnpm typeCheck` — run TypeScript checks
+- `pnpm test:unit` — run unit tests (Vitest)
+- `pnpm test:unit:watch` — watch mode
+- `pnpm test:unit:coverage` — run unit tests with coverage
+- `pnpm test:unit:coverage:watch` — watch mode + coverage
+- `pnpm test:e2e` — run Playwright e2e tests
+- `pnpm test:e2e:ui` — run e2e tests with UI
+- `pnpm test:e2e:report` — show test coverage report
+- `preinstall` — prevent installing with npm or yarn, use pnpm instead
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Path Mapping (Alias)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+To improve DX and avoid long relative imports like `../../../components`, this project uses a path alias:
+
+```ts
+import { Button } from "~/components/ui/Button";
+```
+
+The alias is configured in:
+
+- `tsconfig.json` — for TypeScript configuration
+- `next.config.js` — for Next.js configuration
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for more information.
